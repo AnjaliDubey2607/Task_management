@@ -1,0 +1,25 @@
+.header-link{
+width: 102px !important;
+}
+
+.header-link a, .header-link button {
+color: white !important;
+}
+
+.header-link a:hover, .header-link button:hover{
+    color: gray
+}
+
+span.action_span {
+    margin-left: 10px;
+}
+
+.update-btn {
+    color: white !important;
+    background-color: #0d6efd !important;
+}
+
+.delete-btn{
+    color: white !important;
+    background-color: #dc3545 !important;
+}

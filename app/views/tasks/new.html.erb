@@ -1,0 +1,20 @@
+<div class="container">
+		<div class="row align-items-center text-center"
+			style="min-height: 80vh">
+			<div class='edit_div d-flex align-items-center justify-content-center'>
+        <div class="card" style="width: 500px;">
+        <div class="card-header">
+        <h1>New task</h1>
+        </div>
+        <div class="card-body">
+          <%= render "form", task: @task %>
+        </div>
+
+          <div class="card-footer">
+            <%= link_to "Back to tasks", tasks_path %>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>

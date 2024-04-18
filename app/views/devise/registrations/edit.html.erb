@@ -1,0 +1,56 @@
+<div class="container">
+		<div class="row align-items-center text-center"
+			style="min-height: 80vh">
+			<div class='edit_div d-flex align-items-center justify-content-center'>
+        <div class="card" style="width: 350px;">
+        <div class="card-header">
+          <h2>Edit <%= resource_name.to_s.humanize %></h2>
+        </div>
+        <div class="card-body">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+            <div class="field mb-2">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+            </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+
+            <div class="field mb-2">
+              <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "password" %>
+              <i>(leave blank if you don't want to change it)</i>
+              <% if @minimum_password_length %>
+                <br />
+                <em><%= @minimum_password_length %> characters minimum</em>
+              <% end %>
+            </div>
+
+            <div class="field mb-2">
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "password_confirmation" %>
+            </div>
+
+            <div class="field mb-2">
+              <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control", placeholder: "current_password" %>
+              <i>(we need your current password to confirm your changes)</i>
+            </div>
+
+            <div class="actions">
+                <button type='submit' class='update-btn btn'>Update</button>
+
+                <%= button_to "Delete account", registration_path(resource_name), 
+                data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, 
+                  method: :delete, class: "delete-btn btn" %>
+            </div>
+          <% end %>
+        </div>
+        <div class="card-footer">
+        <%= link_to "Back", :back, class: "btn btn-primary mb-2" %>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row align-items-center text-center"
+			style="min-height: 80vh">
+		<div class='edit_div d-flex align-items-center justify-content-center'>
+			<div class="card" style="width: 500px;">
+				<div class="card-header">
+				<h1>My Profile</h1>
+				</div>
+				<div class="card-body">
+					<p>Email: <%= current_user.email %></p>
+					<%= link_to "edit profile", edit_user_registration_path, class: "btn btn-primary" %>
+				</div>
+
+				<div class="card-footer">
+					<%= link_to "Back to tasks", tasks_path %>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
