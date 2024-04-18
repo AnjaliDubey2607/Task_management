@@ -34,18 +34,18 @@ To get this application up and running on your local machine, follow these steps
 
 4. precompile the assets
 
-  ```bash
-  rails assets:precompile
+    ```bash
+    rails assets:precompile
 
 5. Start the Server
 
-  ```bash
-  rails server
+    ```bash
+    rails server
   
 
 Your application will now be running at http://localhost:3000.
 
 6. Run Test Cases
 
-  ```bash
-  bundle exec rspec
+    ```bash
+    bundle exec rspec
