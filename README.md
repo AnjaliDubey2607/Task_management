@@ -13,23 +13,42 @@ Before you begin, ensure you have the following installed on your local machine:
 To get this application up and running on your local machine, follow these steps:
 
   **1. Clone the Repository**
+  
+  ```bash
   git clone https://github.com/AnjaliDubey2607/Task_management.git
   
   **2. Install Dependencies**
+
+  ```bash
   cd todo-list-rails
+
+  ```bash
   bundle install
   
   **3. Database Setup**
   configure database file with your PostgreSQL credentials and run the following command :
+  ```bash
   rails db:create
+
+  ```bash
   rails db:migrate
 
+  ```bash
+  rails db:setup
+
   **4. precompile the assets**
+
+  ```bash
   rails assets:precompile
 
   **5. Start the Server**
+
+  ```bash
   rails server
+  
   Your application will now be running at http://localhost:3000.
 
   **6. Run Test Cases**
+
+  ```bash
   bundle exec rspec

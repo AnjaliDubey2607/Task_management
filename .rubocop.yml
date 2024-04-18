@@ -1,0 +1,21 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  NewCops: enable # Required to behave like default, when we did not have this config file
+  Exclude:
+    # Only exclude files that are managed by external tools. E.g. binstubs
+    # Ignore binstubs. Managed by bundler.
+    - 'bin/*'
+    # Exclude vendored gems. E.g. the CI will place them in here.
+    - 'vendor/**/*'
+    - db/**/*
+    # Exclude schema.rb as that is generated- and managed by rails
+    - db/schema.rb
+  SuggestExtensions: false
+  
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+    - config/environments/test.rb
+    - config/routes.rb # Routes is a DSL that requires us to write large blocks.
